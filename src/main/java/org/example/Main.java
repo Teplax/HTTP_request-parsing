@@ -39,7 +39,7 @@ public class Main {
                         response.getEntity().getContent(),
                         new TypeReference<>(){}
                 );
-                catFacts.stream().filter(x->x.getUpvotes()!=null).
+                catFacts.stream().filter(x->x.getUpvotes()!=null&&x.getUpvotes()>0).
                         forEach(System.out::println);
             }
         }
